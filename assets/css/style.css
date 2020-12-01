@@ -19,11 +19,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1e1e1e;
+  color: #393939;
 }
 
 a {
-  color: #1e1e1e;
+  color: #393939;
   transition: all 0.5s ease-in-out;
 }
 
@@ -47,6 +47,10 @@ a:hover {
 
 .color-text-a {
   color: #4e4e4e;
+}
+
+p {
+	color: #393939;
 }
 
 .box-shadow, .paralax-mf, .service-box, .work-box, .card-blog {
@@ -79,9 +83,19 @@ a:hover {
 .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 300px 100px;
   background-position: center center;
 }
+
+#banner {
+  max-width: 94vw;
+  height: 50vh;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  filter: blur(2px) grayscale(70%);
+}
+
 
 @media (max-width: 1024px) {
   .bg-image {
@@ -119,20 +133,37 @@ a:hover {
   vertical-align: middle;
 }
 
- #banner {
-   filter: blur(2px) grayscale(70%);
-   }
+
 
 	#titleProject {
-		font-size: 45px;
-		font-weight: 700;
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0 auto 2em
 	}
 
 	#subtitleProject {
-		font-size: 25px;
+		font-size: 1.5em;
 		font-weight: 700;
-    margin-top: 130px;
-	}
+    margin: 8em auto 2em;
+    text-align: center;
+  }
+  
+
+  @media (min-width: 700px) {
+  
+    #titleProject {
+      font-size: 45px;
+      margin: 0;
+    }
+
+    #subtitleProject {
+      font-size: 25px;
+      margin: 130px 0 0;
+      text-align: left;
+    }
+  
+  }
+  
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -187,7 +218,8 @@ a:hover {
 }
 
 .work-content {
-  padding: 2rem 3% 1rem 4%;
+  padding: 1rem 3% 1rem 4%;
+
 }
 
 .work-content .w-more {
@@ -215,8 +247,123 @@ a:hover {
 
 .w-title {
   font-size: 0.8rem;
-  font-weight: bold;
   color: #fff;
+
+}
+
+
+.title-a {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  color: #4262FF;
+  font-weight: bold;
+}
+
+.title-b {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #E15454;
+  font-weight: bold;
+}
+
+.title-c {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #D9A0BF;
+  font-weight: bold;
+}
+
+
+@media (min-width: 700px) {
+  #banner {
+    max-width: 97vw;
+    height: 50vh;
+  }
+  .work-content .w-like .num-like {
+    font-size: 12px;
+  }
+
+  .w-title {
+    font-size: 12px;
+    max-width: 300px;
+    height: 35px;
+  }
+
+  .work-img {
+    object-fit: cover;
+    max-width: 450px;
+    max-height: 130px;
+  }
+
+  .work-content {
+    padding: 15px;
+}
+
+  .work-box {
+    width:230px;
+    margin: 0 auto;
+}
+
+div.col-sm-11 {
+  flex: none;
+  max-width: none;
+}
+}
+
+@media (min-width: 900px) {
+  .work-img {
+    object-fit: cover;
+    max-width: 450px;
+    max-height: 180px;
+  }
+
+
+}
+
+@media (min-width: 1100px) {
+  .w-title {
+    font-size: 16px;
+    max-width: 300px;
+    height: 60px;
+  }
+
+  .work-img {
+    object-fit: cover;
+    max-width: 450px;
+    max-height: 180px;
+  }
+
+.work-img .img-fluid  {
+  object-fit: cover; 
+  max-width: 450px;
+  max-height: 200px;
+
+}
+}
+
+@media (min-width: 1400px) {
+  #banner {
+    max-width: 98vw;
+    height: 50vh;
+  }
+  .work-content .w-like .num-like {
+    font-size: 16px;
+  }
+
+  .w-title {
+    font-size: 16px;
+    max-width: 300px;
+    height: 50px;
+  }
+  
+}
+  @media (min-width: 1100px){ 
+    .work-img .img-fluid {
+      max-width: 100%;
+      height: auto;
+      max-height: none; 
+}
+
 }
 
 /*--------------------------------------------------------------
@@ -305,21 +452,3 @@ a:hover {
     margin-top: 30px;
   }
 }
-
-.title-a {
-  margin-top: 30px;
-  color: #4262FF;
-}
-
-.title-b {
-  margin-top: 30px;
-  color: #E15454;
-}
-
-.title-c {
-  margin-top: 30px;
-  color: #D9A0BF;
-}
-
-
-
